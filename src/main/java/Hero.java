@@ -47,5 +47,9 @@ public class Hero {
         this.weaknesses = weaknesses;
     }
 
+    public static ArrayList<Hero> getAll(){
+        return instances;
+    }
+
     }
 
