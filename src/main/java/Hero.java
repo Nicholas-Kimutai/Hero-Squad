@@ -3,10 +3,9 @@ import java.util.ArrayList;
 public class Hero {
     private String name;
     private int age;
-    private int id;
-    private int squadId;
     private String powers;
     private String weaknesses;
+    private int id;
     private static ArrayList<Hero> instances = new ArrayList<Hero>();
 
     public Hero (String name,int age,String powers,String weaknesses){
@@ -17,64 +16,40 @@ public class Hero {
         instances.add(this);
         this.id = instances.size();
     }
-    // create get and set methods
+    // create get methods
 
     public String getName(){
         return name;
-    }
-    public void setName(String name){
-        this.name=name;
     }
 
     public int getAge(){
         return age;
     }
-    public void setAge(int age){
-        this.age=age;
-    }
+
     public String getPowers() {
         return powers;
     }
 
-    public void setPowers(String powers) {
-        this.powers = powers;
-    }
 
     public String getWeaknesses() {
         return weaknesses;
     }
 
-    public void setWeaknesses(String weaknesses) {
-        this.weaknesses = weaknesses;
+    public int getId() {
+        return id;
     }
 
     public static ArrayList<Hero> getAll(){
         return instances;
     }
-    public static void clearAllHeroes(){
+    public static void clear(){
         instances.clear();
     }
 
-    public int getId() {
-        return id;
-    }
+
     public static Hero findById(int id){
         return  instances.get(id-1);
     }
-    public void deleteHero(){
-        instances.remove(id-1);
-    }
 
-
-    public int getSquadId() {
-        return squadId;
-    }
-
-    public void update(String newName, int newAge, String powers,String weaknesses) {
-        this.name = name;
-        this.age = age;
-        this.powers = powers;
-        this.weaknesses = weaknesses;
-    }
 }
 

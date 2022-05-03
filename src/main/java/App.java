@@ -15,7 +15,7 @@ public class App {
             return new ModelAndView(model, "index.hbs");
         }, new HandlebarsTemplateEngine());
 
-        // Heroes
+        // Heroes details
         get("/heroes", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
             ArrayList<Hero> heroes = Hero.getAll();
@@ -24,6 +24,10 @@ public class App {
             model.put("squads",squads);
             return new ModelAndView(model, "heroes.hbs");
         },new HandlebarsTemplateEngine());
+
+
+
+
 
 
 
