@@ -50,6 +50,16 @@ public class Hero {
     public static ArrayList<Hero> getAll(){
         return instances;
     }
+    public static void clearAllHeroes(){
+        instances.clear();
+    }
+
+    public int getId() {
+        return id;
+    }
+    public static Hero findById(int id){
+        return  instances.get(id-1);
+    }
 
     }
 
