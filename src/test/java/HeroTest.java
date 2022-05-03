@@ -17,7 +17,7 @@ public class HeroTest {
     }
     @Test
     public void NewHeroObjectCorrectlyCreated_true() throws Exception{
-        Hero myHero = new Hero("Nick", 25, "Fast Thinker", "Impatience");
+        Hero myHero = new Hero("Nick", 25, "Fast thinker", "Impatience");
         assertEquals(true, myHero instanceof Hero);
 
     }
