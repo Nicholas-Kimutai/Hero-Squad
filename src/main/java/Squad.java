@@ -24,4 +24,10 @@ public class Squad {
     public String getName(){
         return name;
     }
+    public String getCause() {
+        return cause;
+    }
+    public static  ArrayList<Squad> getAll(){
+        return instance;
+    }
 }
