@@ -4,11 +4,11 @@ public class Hero {
     private String name;
     private int age;
     private int id;
-    private ArrayList<String>powers =new ArrayList<String>();
-    private ArrayList<String>weaknesses=new ArrayList<String>();
+    private String powers;
+    private String weaknesses;
     private static ArrayList<Hero> instances = new ArrayList<Hero>();
 
-    public Hero (String name,int age,ArrayList<String>powers,ArrayList<String>weaknesses){
+    public Hero (String name,int age,String powers,String weaknesses){
         this.name=name;
         this.age=age;
         this.powers=powers;
@@ -16,10 +16,21 @@ public class Hero {
         instances.add(this);
         this.id = instances.size();
     }
-    // create get methods
+    // create get and set methods
 
     public String getName(){
         return name;
     }
+    public void setName(String name){
+        this.name=name;
+    }
 
-}
+    public int getAge(){
+        return age;
+    }
+    public void setAge(int age){
+        this.age=age;
+    }
+
+    }
+
