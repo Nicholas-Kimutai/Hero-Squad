@@ -4,6 +4,7 @@ public class Hero {
     private String name;
     private int age;
     private int id;
+    private int squadId;
     private String powers;
     private String weaknesses;
     private static ArrayList<Hero> instances = new ArrayList<Hero>();
@@ -64,5 +65,16 @@ public class Hero {
         instances.remove(id-1);
     }
 
+
+    public int getSquadId() {
+        return squadId;
     }
+
+    public void update(String newName, int newAge, String powers,String weaknesses) {
+        this.name = name;
+        this.age = age;
+        this.powers = powers;
+        this.weaknesses = weaknesses;
+    }
+}
 
