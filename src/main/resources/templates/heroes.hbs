@@ -1,8 +1,12 @@
-{{#partial "styles"}}
+<!DOCTYPE html>
+<html>
+    <head>
         <link rel="stylesheet" href="/css/heroes.css">
-{{/partial}}
-
-{{#partial "content"}}
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Sansita&display=swap" rel="stylesheet">
+        <link rel='stylesheet' href='/css/app.css'>
+    </head>
+    <body>
 {{#if editHero}}
         <h2 class="text-center">Update your hero details!</h2>
         <div class="container mt-5 offset-sm-3 pt-3 pb-3">
@@ -217,7 +221,6 @@
                                                 <option value="{{id}}">{{name}}</option>
                                             {{/each}}
                                         </select>
-                                        <!--                    <a href="/squad/new"><p class="text white">Create your own squad</p></a>-->
                                     </div>
                                 </div>
                             </div>
@@ -229,5 +232,5 @@
         </div>
     {{/if}}
 
-{{/partial}}
-{{>layout.hbs}}
+    </body>
+</html>
