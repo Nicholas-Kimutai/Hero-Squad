@@ -30,4 +30,14 @@ public class Squad {
     public static  ArrayList<Squad> getAll(){
         return instance;
     }
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
+    }
+    public static Squad findById(int id) {
+        return instance.get(id - 1);
+    }
 }
