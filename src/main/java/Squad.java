@@ -16,4 +16,9 @@ public class Squad {
         this.id = instance.size();
 
     }
+
+    // Create get and set methods
+    public int getMaxSize() {
+        return maxSize;
+    }
 }
