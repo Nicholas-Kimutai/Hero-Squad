@@ -31,6 +31,21 @@ public class Hero {
     public void setAge(int age){
         this.age=age;
     }
+    public String getPowers() {
+        return powers;
+    }
+
+    public void setPowers(String powers) {
+        this.powers = powers;
+    }
+
+    public String getWeaknesses() {
+        return weaknesses;
+    }
+
+    public void setWeaknesses(String weaknesses) {
+        this.weaknesses = weaknesses;
+    }
 
     }
 
