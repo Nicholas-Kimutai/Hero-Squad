@@ -21,4 +21,7 @@ public class Squad {
     public int getMaxSize() {
         return maxSize;
     }
+    public String getName(){
+        return name;
+    }
 }
