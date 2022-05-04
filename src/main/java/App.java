@@ -16,7 +16,7 @@ public class App {
         }, new HandlebarsTemplateEngine());
 
         post("/heroes/new",(request, response) -> {
-            Map<String,Object> model = new HashMap<String, Object>();
+            Map<String,Object> model = new HashMap<>();
             String name = request.queryParams("name");
             int age = Integer.parseInt(request.queryParams("age"));
             String[] powersAdd = request.queryMap().toMap().get("power");
@@ -57,11 +57,10 @@ public class App {
             ArrayList<Squad> squads = Squad.getAll();
             model.put("squads",squads);
             for (Hero hero: heroes) {
-                int idOfHeroToFind = hero.getSquadId();
-                Squad squad = Squad.findById(idOfHeroToFind);
+                int heroFindId = hero.getSquadId();
+                Squad squad = Squad.findById(heroFindId);
                 model.put("squad",squad);
             }
-
             return new ModelAndView(model,"heroesList.hbs");
         }, new HandlebarsTemplateEngine());
 
