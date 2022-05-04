@@ -38,7 +38,7 @@ public class App {
             int squadId = Integer.parseInt(request.queryParams("squadId"));
             Hero hero = new Hero(name,age,powers,weaknesses,squadId);
             model.put("hero",hero);
-            return new ModelAndView(model,"success.hbs");
+            return new ModelAndView(model,"successHero.hbs");
         }, new HandlebarsTemplateEngine());
 
         get("/heroes", (request, response) -> {
@@ -68,7 +68,7 @@ public class App {
         get("/heroes/delete", (request, response) -> {
             Map<String,Object> model = new HashMap<String, Object>();
             Hero.clearAll();
-            return new ModelAndView(model, "success.hbs");
+            return new ModelAndView(model, "successHero.hbs");
         }, new HandlebarsTemplateEngine());
 
         get("/heroes/:id", (request, response) -> {
@@ -113,7 +113,7 @@ public class App {
             }
             Hero editHero = Hero.findById(idOfHeroToEdit);
             editHero.update(newName, newAge, powers, weaknesses);
-            return new ModelAndView(model, "success.hbs");
+            return new ModelAndView(model, "successHero.hbs");
         }, new HandlebarsTemplateEngine());
 
         get("/heroes/:id/delete", (request, response) -> {
@@ -123,7 +123,7 @@ public class App {
             Hero deleteHero = Hero.findById(idOfHeroToDelete);
             deleteHero.deleteHero();
 
-            return new ModelAndView(model, "success.hbs");
+            return new ModelAndView(model, "successHero.hbs");
         }, new HandlebarsTemplateEngine());
 
         //squad
